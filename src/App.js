@@ -1,18 +1,18 @@
 import { Container } from "@mui/material";
 import "./App.css";
-import NavBar from "./NavBar";
-import CustomPaginationActionsTable from "./Table";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Form from "./Form";
+import NavBar from "./components/NavBar";
+import Home from "./components/Home";
+import Form from "./components/Form";
 
 function App() {
   return (
     <>
       <BrowserRouter>
         <NavBar />
-        <Container maxWidth="xl">
+        <Container>
           <Routes>
-            <Route path="/table" element={<CustomPaginationActionsTable />} />
+            <Route path="/" element={<Home />} />
             <Route path="/form" element={<Form />} />
           </Routes>
         </Container>
